@@ -1,0 +1,24 @@
+#pragma once
+
+#include "Component.h"
+
+class Actor;
+
+class MoveComponent final : public Component
+{
+public:
+	MoveComponent(Actor* const pOwner);
+	virtual ~MoveComponent() = default;
+
+	void Update(const float deltaTime) override;
+
+	float GetAngularSpeed() const;
+	void SetAngularSpeed(const float speed);
+
+	float GetForwardSpeed() const;
+	void SetForwardSpeed(const float speed);
+
+private:
+	float mAngularSpeed;
+	float mForwardSpeed;
+};
