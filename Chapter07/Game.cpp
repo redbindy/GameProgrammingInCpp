@@ -140,8 +140,8 @@ bool Game::Initialize()
 		pRadarSprite->SetTexture(mpRenderer->GetTexture("Assets/Radar.png"));
 
 		Actor* const pSphereSound = new Actor(this);
-		pSphere->SetPosition(Vector3(500.f, -75.f, 0.f));
-		pSphere->SetScale(1.f);
+		pSphereSound->SetPosition(Vector3(500.f, -75.f, 0.f));
+		pSphereSound->SetScale(1.f);
 
 		MeshComponent* const pSphereMesh = new MeshComponent(pSphereSound);
 		pSphereMesh->SetMesh(mpRenderer->GetMesh("Assets/Sphere.gpmesh"));

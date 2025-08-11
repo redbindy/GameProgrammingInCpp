@@ -73,6 +73,7 @@ inline const Vector3& Actor::GetPosition() const
 inline void Actor::SetPosition(const Vector3& pos)
 {
 	mPosition = pos;
+	mbRecomputeWorldTransform = true;
 }
 
 inline float Actor::GetScale() const
@@ -83,6 +84,7 @@ inline float Actor::GetScale() const
 inline void Actor::SetScale(const float scale)
 {
 	mScale = scale;
+	mbRecomputeWorldTransform = true;
 }
 
 inline const Quaternion& Actor::GetRotation() const
@@ -93,6 +95,7 @@ inline const Quaternion& Actor::GetRotation() const
 inline void Actor::SetRotation(const Quaternion& rotation)
 {
 	mRotation = rotation;
+	mbRecomputeWorldTransform = true;
 }
 
 inline const Matrix4& Actor::GetWorldTransform() const
@@ -113,6 +116,7 @@ inline Actor::EState Actor::GetState() const
 inline void Actor::SetState(const Actor::EState state)
 {
 	mState = state;
+	mbRecomputeWorldTransform = true;
 }
 
 inline Game* Actor::GetGame()
