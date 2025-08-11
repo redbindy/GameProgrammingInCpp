@@ -7,6 +7,7 @@
 
 Actor::Actor(Game* const pGame)
 	: mState(EState::ACTIVE)
+	, mWorldTransform(Matrix4::Identity)
 	, mPosition(Vector3::Zero)
 	, mRotation(Quaternion::Identity)
 	, mScale(1.f)

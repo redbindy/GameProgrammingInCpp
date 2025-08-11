@@ -29,7 +29,7 @@ SpriteComponent::~SpriteComponent()
 	Game* const pGame = mpOwner->GetGame();
 	Renderer* const pRenderer = pGame->GetRenderer();
 
-	pRenderer->AddSprite(this);
+	pRenderer->RemoveSprite(this);
 }
 
 void SpriteComponent::Draw(Shader* const pShader)

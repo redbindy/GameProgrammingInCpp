@@ -12,7 +12,7 @@ SoundEvent::SoundEvent()
 
 SoundEvent::SoundEvent(AudioSystem* const pSystem, const unsigned int id)
 	: mpSystem(pSystem)
-	, mID(0)
+	, mID(id)
 {
 }
 

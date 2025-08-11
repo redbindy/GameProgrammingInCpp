@@ -143,10 +143,10 @@ bool Game::Initialize()
 		pSphere->SetPosition(Vector3(500.f, -75.f, 0.f));
 		pSphere->SetScale(1.f);
 
-		MeshComponent* const pSphereMesh = new MeshComponent(pSphere);
+		MeshComponent* const pSphereMesh = new MeshComponent(pSphereSound);
 		pSphereMesh->SetMesh(mpRenderer->GetMesh("Assets/Sphere.gpmesh"));
 
-		AudioComponent* const pAudioComp = new AudioComponent(pSphere);
+		AudioComponent* const pAudioComp = new AudioComponent(pSphereSound);
 		pAudioComp->PlayEvent("event:/FireLoop");
 
 		mMusicEvent = mpAudioSystem->PlayEvent("event:/Music");

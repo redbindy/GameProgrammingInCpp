@@ -58,7 +58,7 @@ void Shader::SetFloatUniform(const char* name, const float value)
 {
 	const GLuint loc = glGetUniformLocation(mShaderProgram, name);
 
-	glUniform1d(loc, value);
+	glUniform1f(loc, value);
 }
 
 bool Shader::compileShader(const std::string& fileName, GLenum shaderType, GLuint& outShader)
