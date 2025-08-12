@@ -118,7 +118,7 @@ bool Renderer::Initialize(const float screenWidth, const float screenHeight)
 		mpSpriteVerts = new VertexArray(vertices, 4, indices, 6);
 	}
 
-	SDL_GetWindowRelativeMouseMode(mpWindow);
+	SDL_SetWindowRelativeMouseMode(mpWindow, true);
 	SDL_GetRelativeMouseState(nullptr, nullptr);
 
 	return true;
